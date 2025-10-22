@@ -22,7 +22,7 @@ let benzina = [];
 let diesel = [];
 let otherFuel = [];
 
-for (let i = 0; i < cars.length; i++) {
+/*for (let i = 0; i < cars.length; i++) {
     const car = cars[i];
     if (car.fuel === 'benzina') {
         benzina.push(car);  
@@ -34,4 +34,18 @@ for (let i = 0; i < cars.length; i++) {
 }
  console.log(benzina);
  console.log(diesel);
- console.log(otherFuel);
+ console.log(otherFuel);*/
+
+cars.forEach(car => {
+    if (car.fuel === 'benzina') {
+        benzina.push(car);
+    } else if (car.fuel === 'diesel') {
+        diesel.push(car);
+    } else if (car.fuel !== 'benzina', 'diesel'){
+        otherFuel.push(car);
+    }
+});
+
+console.log(benzina);
+console.log(diesel);
+console.log(otherFuel);
